@@ -1,0 +1,23 @@
+{{!-- views/books/books-edit.hbs --}}
+
+<h2>Edit destinations: {{destinations.safari}}</h2>
+
+<form action="/destinations/{{destinations._id}}/edit" method="post">
+  <label> Location:
+    <input type="text" name="title" value="{{destinations.location}}" />
+  </label>
+
+  <label> Safari:
+    <input type="text" name="safari" value="{{dsetinations.safari}}" />
+  </label>
+
+  <label> Description:
+    <textarea name="description" cols="30" rows="4">{{destinations.description}}</textarea>
+  </label>
+
+  <label> Rate:
+    <input type="number" name="rating" min="1" max="10" value="{{book.rating}}" />
+  </label>
+
+  <button>Save changes</button>
+</form>

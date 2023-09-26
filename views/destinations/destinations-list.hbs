@@ -1,0 +1,18 @@
+
+
+<h1>Destinations</h1>
+
+{{!-- since we passed allThedestinationsFromDB as `destinations`,
+we can iterate over it here with #each--}}
+
+{{#each destinations}}
+  <div>
+    <h3>{{location}}</h3>
+    <p>By: {{safari}}</p> {{!-- additional book property --}}
+    <a href="/destinations/{{_id}}">See details</a> {{!-- link that points to the details page --}}
+    <a href="/destinations/{{_id}}/edit">Edit</a> {{!-- link to redirect to the edit form for each specific book  --}}
+    <form action="/books/{{_id}}/delete" method="POST">
+      <button>Delete</button>
+    </form>
+  </div>
+{{/each}}
